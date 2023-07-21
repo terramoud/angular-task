@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-image"></div>
+  <div class="card-sections-wrapper">
+    <div class="card-section">
+      <div class="card-name">{{ card.getName() }}</div>
+      <div class="card-like-button">
+        <span class="material-icons">favorite</span>
+      </div>
+    </div>
+    <div class="card-section">
+      <div class="card-description">{{ card.getDescription() }}</div>
+      <div class="card-expire-time">{{ card.getExpireTime() }}</div>
+    </div>
+    <div class="card-section">
+      <div class="card-price">{{ card.getPrice()}}</div>
+      <button class="button-cancel add-to-card">Add to Cart</button>
+    </div>
+  </div>
+</div>
+

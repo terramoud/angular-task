@@ -1,0 +1,290 @@
+@import './src/app/app.variables';
+@import './src/app/app.mixins';
+
+button {
+  @include button-reset;
+}
+
+@media only screen and (max-width: 576px) {
+  .card {
+    width: 14rem;
+    padding: 0.25rem 0.25rem 1.5rem;
+
+    &-image {
+      background-color: $card-image-bg-color;
+      height: 12rem;
+    }
+
+    &-sections-wrapper {
+      background-color: $category-bg-color;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &-name {
+      height: 1.2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 80%;
+    }
+
+    &-like-button {
+      & .material-icons {
+        font-size: 1rem;
+      }
+    }
+
+    &-description {
+      font-size: 0.7rem;
+      height: 0.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 60%;
+    }
+
+    &-expire-time {
+      font-size: 0.5rem;
+      padding-top: 0.15rem;
+      height: 0.9rem;
+      overflow: hidden;
+      width: 35%;
+    }
+
+    & .add-to-card {
+      border: 2px solid $field-border-color;
+      font-family: $main-font-family;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      color: $default-font-color;
+      width: 6rem;
+      height: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .card {
+    width: 14rem;
+    padding: 0.25rem 0.25rem 1.5rem;
+
+    &-image {
+      background-color: $card-image-bg-color;
+      height: 12rem;
+    }
+
+    &-sections-wrapper {
+      background-color: $category-bg-color;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &-name {
+      height: 1.2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 80%;
+    }
+
+    &-like-button {
+      & .material-icons {
+        font-size: 1rem;
+      }
+    }
+
+    &-description {
+      font-size: 0.7rem;
+      height: 0.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 60%;
+    }
+
+    &-expire-time {
+      font-size: 0.5rem;
+      padding-top: 0.15rem;
+      height: 0.9rem;
+      overflow: hidden;
+      width: 35%;
+    }
+
+    & .add-to-card {
+      border: 2px solid $field-border-color;
+      font-family: $main-font-family;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      color: $default-font-color;
+      width: 6rem;
+      height: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 14rem;
+    padding: 0.25rem 0.25rem 1.5rem;
+
+    &-image {
+      background-color: $card-image-bg-color;
+      height: 12rem;
+    }
+
+    &-sections-wrapper {
+      background-color: $category-bg-color;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &-name {
+      height: 1.2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 80%;
+    }
+
+    &-like-button {
+      & .material-icons {
+        font-size: 1rem;
+      }
+    }
+
+    &-description {
+      font-size: 0.7rem;
+      height: 0.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 60%;
+    }
+
+    &-expire-time {
+      font-size: 0.5rem;
+      padding-top: 0.15rem;
+      height: 0.9rem;
+      overflow: hidden;
+      width: 35%;
+    }
+
+    & .add-to-card {
+      border: 2px solid $field-border-color;
+      font-family: $main-font-family;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      color: $default-font-color;
+      width: 6rem;
+      height: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .card {
+    width: 14rem;
+    padding: 0.25rem 0.25rem 1.5rem;
+
+    &-image {
+      background-color: $card-image-bg-color;
+      height: 12rem;
+    }
+
+    &-sections-wrapper {
+      background-color: $category-bg-color;
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &-name {
+      height: 1.2rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 80%;
+    }
+
+    &-like-button {
+      & .material-icons {
+        font-size: 1rem;
+      }
+    }
+
+    &-description {
+      font-size: 0.7rem;
+      height: 0.9rem;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 60%;
+    }
+
+    &-expire-time {
+      font-size: 0.5rem;
+      padding-top: 0.15rem;
+      height: 0.9rem;
+      overflow: hidden;
+      width: 35%;
+    }
+
+    & .add-to-card {
+      border: 2px solid $field-border-color;
+      font-family: $main-font-family;
+      text-align: center;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      color: $default-font-color;
+      width: 6rem;
+      height: 2rem;
+    }
+  }
+}
