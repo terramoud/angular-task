@@ -1,0 +1,37 @@
+.pagination {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pagination li a {
+  color: gray;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.pagination li span {
+  color: gray;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid gray;
+  border-radius: 3px;
+  //font-size: 17px;
+  display: inline;
+}
+
+.pagination li a.active {
+  color: white;
+  background-color: gray;
+}
