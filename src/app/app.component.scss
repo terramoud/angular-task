@@ -1,0 +1,22 @@
+@import './src/app/app.variables';
+@import './src/app/app.mixins';
+
+* {
+  font-family: $main-font-family;
+  box-sizing: border-box;
+}
+
+button {
+  @include button-reset;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
