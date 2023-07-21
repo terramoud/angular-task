@@ -12,7 +12,7 @@
       <div class="card-expire-time">{{ card.getExpireTime() }}</div>
     </div>
     <div class="card-section">
-      <div class="card-price">{{ card.getPrice()}}</div>
+      <div class="card-price">{{ card.getPrice() | priceFormat }}</div>
       <button class="button-cancel add-to-card">Add to Cart</button>
     </div>
   </div>

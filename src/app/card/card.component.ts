@@ -12,4 +12,5 @@ export class CardComponent {
   constructor() {
     this.card = new Card();
   }
+
 }

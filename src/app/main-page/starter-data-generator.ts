@@ -45,7 +45,7 @@ export class StarterDataGenerator {
     card.setName(`Coupon${id} ${StarterDataGenerator.getRandomWords(2)}`);
     card.setDescription(StarterDataGenerator.getRandomWords(3));
     card.setExpireTime("Expires in " + Math.floor(Math.random() * 10) + " days");
-    card.setPrice("$" + Math.floor(Math.random() * 500));
+    card.setPrice(Math.floor(Math.random() * 500).toString());
     card.setCreatedDate(new Date().getTime() + (id * 100));
     card.setCategory(category);
     return card;

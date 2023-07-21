@@ -22,6 +22,7 @@ import { CardComponent } from './card/card.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { PriceFormatPipe } from './price-format.pipe';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     RegistrationPageComponent,
     MainPageComponent,
     PaginationComponent,
+    PriceFormatPipe,
   ],
   imports: [
     BrowserModule,
