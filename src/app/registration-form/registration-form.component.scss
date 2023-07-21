@@ -169,7 +169,7 @@ button {
   }
 
   .register-button {
-    border: 2px solid grey;
+    border: 2px solid black;
     font-family: $main-font-family;
     text-align: center;
     height: 2.5rem;
@@ -183,7 +183,7 @@ button.button-approve[disabled] {
   opacity: 0.6;
   cursor: not-allowed;
   pointer-events: none;
-  border: 2px solid black ;
+  border: 2px solid grey;
 }
 
 
