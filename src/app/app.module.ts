@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductFormModule } from './product-form/product-form.module';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -29,7 +27,6 @@ import { PaginationComponent } from './pagination/pagination.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
     RegistrationFormComponent,
     HeaderComponent,
     BurgerMenuComponent,
@@ -43,7 +40,6 @@ import { PaginationComponent } from './pagination/pagination.component';
     PaginationComponent,
   ],
   imports: [
-    ProductFormModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
