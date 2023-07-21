@@ -1,0 +1,126 @@
+@import './src/app/app.variables';
+@import './src/app/app.mixins';
+
+@media only screen and (max-width: 576px) {
+  .content {
+    background-color: $color-background;
+  }
+
+  .categories {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 1rem 1rem;
+    padding-bottom: 0.5rem;
+    background-color: $categories-list-bg-color;
+    gap: 1rem;
+  }
+
+  .coupon-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    & .card {
+      padding: 0.25rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .content {
+    background-color: $color-background;
+  }
+
+  .categories {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 1rem;
+    padding-bottom: 0.5rem;
+    background-color: $categories-list-bg-color;
+  }
+
+  .coupon-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    & .card {
+      padding: 0.25rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    background-color: $color-background;
+  }
+
+  .categories {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 8%;
+    padding-bottom: 0.5rem;
+    background-color: $categories-list-bg-color;
+  }
+
+  .coupon-card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    & .card {
+      padding: 0.25rem;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .content {
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem 16%;
+    padding-bottom: 0.5rem;
+    background-color: $categories-list-bg-color;
+  }
+
+  .coupon-card-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    & .card {
+      padding: 0.25rem 0.25rem 1.5rem;
+    }
+  }
+}

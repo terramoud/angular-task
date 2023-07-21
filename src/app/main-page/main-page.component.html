@@ -1,0 +1,25 @@
+<section class="grid-container">
+  <div class="grid-item">
+    <app-header></app-header>
+  </div>
+
+  <div class="grid-item">
+    <main class="content">
+      <nav class="categories">
+        <app-category-card *ngFor="let category of categories" [category]="category"
+                           (categoryClick)="onCategoryClick($event)"></app-category-card>
+      </nav>
+
+      <section class="coupon-card-wrapper">
+        <app-card *ngFor="let card of cards" [card]="card"></app-card>
+      </section>
+
+      <app-pagination [pages]="pages" (pageButtonClick)="onPageButtonClick($event)"></app-pagination>
+    </main>
+  </div>
+
+  <div class="grid-item">
+    <footer class="footer"></footer>
+  </div>
+</section>
+
