@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {StarterDataGenerator} from "./starter-data-generator";
 import {Constants} from "./constants";
 import {debounce} from 'lodash';
-import {CardRenderer} from "./card-renderer";
+import {CardService} from "./card-service";
 import {PaginationCreator} from "./pagination-creator";
 import {Utils} from "./utils";
 import {Card} from "./card";
@@ -15,14 +15,14 @@ import {Page} from "../pagination/page";
 })
 
 export class MainPageComponent implements OnInit {
-  private cardRenderer: CardRenderer;
+  private cardRenderer: CardService;
   private pagination: PaginationCreator;
   public categories: string[];
   public cards: Card[];
   public pages: Page[];
 
   constructor() {
-    this.cardRenderer = new CardRenderer();
+    this.cardRenderer = new CardService();
     this.pagination = new PaginationCreator();
     this.categories = Constants.CATEGORIES;
     this.cards = [];
@@ -34,15 +34,21 @@ export class MainPageComponent implements OnInit {
     const starterDataGenerator: StarterDataGenerator = new StarterDataGenerator();
     starterDataGenerator.clearAndFillLocalStorage();
 
-    window.addEventListener('load', () => {this.returnToLastScrollPositionAfterReopenPage();});
+    window.addEventListener('load', () => {
+      this.returnToLastScrollPositionAfterReopenPage();
+    });
 
-    const debouncedScrollHandler: any = debounce(() => {this.handleScroll()}, Constants.DELAY_BETWEEN_THROTTLING);
+    const debouncedScrollHandler: any = debounce(() => {
+      this.handleScroll()
+    }, Constants.DELAY_BETWEEN_THROTTLING);
     window.addEventListener("scroll", () => {
       debouncedScrollHandler();
     })
 
     const searchInput: any = document.getElementById('search-input');
-    const debouncedSearchHandler: any = debounce(() => {this.handleSearch()}, Constants.DELAY_BETWEEN_THROTTLING);
+    const debouncedSearchHandler: any = debounce(() => {
+      this.handleSearch()
+    }, Constants.DELAY_BETWEEN_THROTTLING);
     searchInput.addEventListener('input', () => {
       debouncedSearchHandler()
     });

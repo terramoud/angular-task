@@ -1,4 +1,5 @@
 export class Card {
+  private id: number;
   private name: string;
   private description: string;
   private expireTime: string;
@@ -8,6 +9,7 @@ export class Card {
   private pageNumber: number;
 
   constructor() {
+    this.id = 0;
     this.name = "";
     this.description = "";
     this.expireTime = "";
@@ -17,11 +19,19 @@ export class Card {
     this.pageNumber = 0;
   }
 
+  public getId(): number {
+    return this.id;
+  }
+
+  public setId(id: number): void {
+    this.id = id;
+  }
+
   public getName(): string {
     return this.name;
   }
 
-  public setName(value: string): void  {
+  public setName(value: string): void {
     this.name = value;
   }
 
@@ -29,7 +39,7 @@ export class Card {
     return this.description;
   }
 
-  public setDescription(value: string): void  {
+  public setDescription(value: string): void {
     this.description = value;
   }
 
@@ -37,7 +47,7 @@ export class Card {
     return this.expireTime;
   }
 
-  public setExpireTime(value: string): void  {
+  public setExpireTime(value: string): void {
     this.expireTime = value;
   }
 
@@ -45,7 +55,7 @@ export class Card {
     return this.price;
   }
 
-  public setPrice(value: string): void  {
+  public setPrice(value: string): void {
     this.price = value;
   }
 
@@ -53,7 +63,7 @@ export class Card {
     return this.createdDate;
   }
 
-  public setCreatedDate(value: number): void  {
+  public setCreatedDate(value: number): void {
     this.createdDate = value;
   }
 
@@ -61,7 +71,7 @@ export class Card {
     return this.category;
   }
 
-  public setCategory(value: string): void  {
+  public setCategory(value: string): void {
     this.category = value;
   }
 

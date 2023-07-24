@@ -16,9 +16,10 @@ export class StarterDataGenerator {
       localStorage.setItem('searchQuery', "");
       localStorage.setItem('category', "all");
       let arrayCards: Array<Card> = StarterDataGenerator.getRandomCards();
-      let cards: Array<Card> = StarterDataGenerator.sortByCreatedDateInDesc(arrayCards);
+      const cards: Array<Card> = StarterDataGenerator.sortByCreatedDateInDesc(arrayCards);
       let cardsJSON: string = JSON.stringify(cards);
       localStorage.setItem("cards", cardsJSON);
+      localStorage.setItem("totalPages", String(cards.at(-1)!.getPageNumber()));
       console.log('LocalStorage has been cleared and filled with random cards.');
     } else {
       console.log('LocalStorage already contains data. Skipping clearing and filling process.');
@@ -42,9 +43,10 @@ export class StarterDataGenerator {
 
   private static generateRandomCard(id: number, category: string): Card {
     let card: Card = new Card();
+    card.setId(id);
     card.setName(`Coupon${id} ${StarterDataGenerator.getRandomWords(2)}`);
-    card.setDescription(StarterDataGenerator.getRandomWords(3));
-    card.setExpireTime("Expires in " + Math.floor(Math.random() * 10) + " days");
+    card.setDescription(StarterDataGenerator.getRandomWords(50));
+    card.setExpireTime("Expires in " + (Math.floor(Math.random() * 10) + 5) + " days");
     card.setPrice(Math.floor(Math.random() * 500).toString());
     card.setCreatedDate(new Date().getTime() + (id * 100));
     card.setCategory(category);
