@@ -1,4 +1,4 @@
-import { PriceFormatPipe } from './price-format.pipe';
+import {PriceFormatPipe} from './price-format.pipe';
 
 describe('PriceFormatPipe', () => {
   it('create an instance', () => {
