@@ -1,0 +1,29 @@
+<section class="grid-container">
+  <div class="grid-item">
+    <app-header></app-header>
+  </div>
+
+  <div class="grid-item">
+    <main class="content">
+      <section *ngIf="isCardExists;" class="content-wrapper">
+        <div class="item">
+          <div class="item-image"></div>
+          <div class="item-description-wrapper">
+            <div class="item-title">Item Detailed Description</div>
+            <div class="item-description">{{ card.getDescription() }}</div>
+          </div>
+        </div>
+        <div class="side-bar">
+          <app-sidebar-card [card]="card"></app-sidebar-card>
+        </div>
+      </section>
+      <div *ngIf="!isCardExists">
+        <h1>ERROR 404. Sorry, the card with such ID was not found.</h1>
+      </div>
+    </main>
+  </div>
+
+  <div class="grid-item">
+    <footer class="footer"></footer>
+  </div>
+</section>

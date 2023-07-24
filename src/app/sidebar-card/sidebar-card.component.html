@@ -1,0 +1,20 @@
+<div class="sidebar-card">
+  <div class="sidebar-card-wrapper">
+    <h3 class="sidebar-card-title">{{ card.getName() }}</h3>
+    <div class="sidebar-card-description">{{ card.getDescription() }}</div>
+  </div>
+  <div class="sidebar-card-wrapper">
+    <div class="sidebar-card-expire-time">
+      <div class="sidebar-card-expire-text">Time left to Buy</div>
+      <div class="sidebar-card-remained-time">{{ card.getExpireTime() }}</div>
+    </div>
+    <div class="sidebar-card-footer">
+      <div class="sidebar-card-price">{{ card.getPrice() | priceFormat }}</div>
+      <button class="sidebar-card-add-to-cart">
+        <span class="sidebar-card-add-to-cart-text">Add to cart</span>
+        <span class="material-icons">shopping_cart</span>
+      </button>
+    </div>
+  </div>
+</div>
+
