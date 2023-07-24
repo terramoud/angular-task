@@ -4,21 +4,24 @@
     <label>Login Name
       <input type="text" formControlName="loginName" placeholder=""/>
     </label>
-    <div *ngIf="registrationForm.get('loginName')?.invalid && (registrationForm.get('loginName')?.dirty || registrationForm.get('loginName')?.touched)">
+    <div
+      *ngIf="registrationForm.get('loginName')?.invalid && (registrationForm.get('loginName')?.dirty || registrationForm.get('loginName')?.touched)">
       <p class="error-message">Login Name is required</p>
     </div>
 
     <label>Password
       <input type="password" formControlName="password" placeholder=""/>
     </label>
-    <div *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
+    <div
+      *ngIf="registrationForm.get('password')?.invalid && (registrationForm.get('password')?.dirty || registrationForm.get('password')?.touched)">
       <p class="error-message">Password is required</p>
     </div>
 
     <label>Email
       <input type="email" formControlName="email" placeholder=""/>
     </label>
-    <div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+    <div
+      *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
       <p class="error-message" *ngIf="registrationForm.get('email')?.errors?.['required']">Email is required</p>
       <p class="error-message" *ngIf="registrationForm.get('email')?.errors?.['email']">Invalid email format</p>
     </div>
@@ -27,29 +30,37 @@
     <label>First Name
       <input type="text" formControlName="firstName" placeholder=""/>
     </label>
-    <div *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+    <div
+      *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
       <p class="error-message">First Name is required</p>
     </div>
 
     <label>Repeat Password
       <input type="password" formControlName="repeatPassword" placeholder=""/>
     </label>
-    <div *ngIf="registrationForm.get('repeatPassword')?.invalid && (registrationForm.get('repeatPassword')?.dirty || registrationForm.get('repeatPassword')?.touched)">
+    <div
+      *ngIf="registrationForm.get('repeatPassword')?.invalid && (registrationForm.get('repeatPassword')?.dirty || registrationForm.get('repeatPassword')?.touched)">
       <p class="error-message">Repeat Password is required</p>
     </div>
-    <div *ngIf="registrationForm.hasError('passwordMismatch') && (registrationForm.get('repeatPassword')?.dirty || registrationForm.get('repeatPassword')?.touched)">
+    <div
+      *ngIf="registrationForm.hasError('passwordMismatch') && (registrationForm.get('repeatPassword')?.dirty || registrationForm.get('repeatPassword')?.touched)">
       <p class="error-message">Passwords do not match</p>
     </div>
 
     <label>Address
       <input type="text" formControlName="address" placeholder=""/>
     </label>
-    <div *ngIf="registrationForm.get('address')?.invalid && (registrationForm.get('address')?.dirty || registrationForm.get('address')?.touched)">
+    <div
+      *ngIf="registrationForm.get('address')?.invalid && (registrationForm.get('address')?.dirty || registrationForm.get('address')?.touched)">
       <p class="error-message">Address is required</p>
     </div>
     <div class="register-form-buttons">
-      <button class="button-approve register-button" type="submit" [disabled]="registrationForm.invalid" >Sing Up</button>
+      <button class="button-approve register-button" type="submit" [disabled]="registrationForm.invalid">Sing Up
+      </button>
     </div>
   </div>
 </form>
+<div *ngIf="(registrationStatus$ | async)">
+  <p style="color: green; text-align: center; font-size: 2rem">Registration successful!</p>
+</div>
 

@@ -10,7 +10,8 @@
           <h2 class="register-form-title">Register</h2>
         </div>
         <div class="register-form-wrapper">
-          <app-registration-form (registrationFormSubmitted)="handleRegisterFormSubmit($event)"></app-registration-form>
+          <app-registration-form (registrationFormSubmitted)="handleRegisterFormSubmit($event)"
+                                 [registrationStatus$]="registrationStatus$"></app-registration-form>
         </div>
       </section>
     </main>

@@ -1,11 +1,11 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators} from '@angular/forms';
+import {Observable} from "rxjs";
 
 const passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
   const password = control.get('password')?.value;
   const repeatPassword = control.get('repeatPassword')?.value;
-
-  return password === repeatPassword ? null : { passwordMismatch: true };
+  return password === repeatPassword ? null : {passwordMismatch: true};
 };
 
 @Component({
@@ -15,9 +15,12 @@ const passwordMatchValidator: ValidatorFn = (control: AbstractControl) => {
 })
 export class RegistrationFormComponent implements OnInit {
   registrationForm!: FormGroup;
-  @Output() registrationFormSubmitted = new EventEmitter<any>();
+  @Output() registrationFormSubmitted = new EventEmitter<FormGroup>();
+  @Input() registrationStatus$: Observable<boolean>;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+    this.registrationStatus$ = new Observable<boolean>();
+  }
 
   ngOnInit() {
     this.registrationForm = this.formBuilder.group({
@@ -27,11 +30,10 @@ export class RegistrationFormComponent implements OnInit {
       firstName: ['', Validators.required],
       repeatPassword: ['', Validators.required],
       address: ['', Validators.required]
-    }, { validator: passwordMatchValidator });
+    }, {validator: passwordMatchValidator});
   }
 
   onSubmit() {
-    console.log("form submitted");
     if (this.registrationForm.valid) {
       this.registrationFormSubmitted.emit(this.registrationForm);
     }
